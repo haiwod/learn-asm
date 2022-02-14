@@ -18,7 +18,6 @@ public class Simple1 {
      * public interface SimpleDemo1 {
      *
      * }
-     *
      */
     public static byte[] generateClazzByte() {
         ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
