@@ -18,11 +18,11 @@ import static org.objectweb.asm.Opcodes.*;
 public class Simple2 {
     /**
      * 生成如下接口
-     * public interface HelloWorld extends Cloneable {
-     * int LESS = -1;
-     * int EQUAL = 0;
-     * int GREATER = 1;
-     * int compareTo(Object o);
+     * public interface SimpleDemo2 extends Cloneable {
+     *      int LESS = -1;
+     *      int EQUAL = 0;
+     *      int GREATER = 1;
+     *      int compareTo(Object o);
      * }
      */
     public static byte[] generateClazzByte() {

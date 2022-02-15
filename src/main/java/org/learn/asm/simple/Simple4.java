@@ -18,17 +18,17 @@ import static org.objectweb.asm.Opcodes.*;
 public class Simple4 {
     /**
      * 生成如下类
-     * public interface SimpleDemo4 {
-     * <p>
-     * public void test(boolean flag){
-     * <p>
-     * if (flag) {
-     * System.out.println("value is true");
-     * }else {
-     * System.out.println("value is false");
-     * }
-     * <p>
-     * }
+     * public class SimpleDemo4 {
+     *
+     *  public void test(boolean flag){
+     *
+     *      if (flag) {
+     *          System.out.println("value is true");
+     *      }else {
+     *          System.out.println("value is false");
+     *      }
+     *
+     *  }
      * }
      */
     private static byte[] generateClazzByte() {

@@ -18,23 +18,23 @@ public class Simple3 {
     /**
      * 生成如下类
      * public class SimpleDemo3 {
-     * <p>
-     * public SimpleDemo3(){
-     * super();
-     * }
-     * <p>
-     * static {
-     * System.out.println("class initialization method");
-     * }
-     * <p>
-     * public void test(){
-     * User user =new User("undefine",1);
-     * }
-     * <p>
-     * public void compare(int a, int b){
-     * int max = Math.max(a,b);
-     * System.out.println(max);
-     * }
+     *
+     *  public SimpleDemo3(){
+     *      super();
+     *  }
+     *
+     *  static {
+     *      System.out.println("class initialization method");
+     *  }
+     *
+     *  public void test(){
+     *      User user =new User("undefine",1);
+     *  }
+     *
+     *  public void compare(int a, int b){
+     *      int max = Math.max(a,b);
+     *      System.out.println(max);
+     *  }
      * }
      */
     public static byte[] generateClazzByte() {
