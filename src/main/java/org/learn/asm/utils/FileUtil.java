@@ -1,8 +1,6 @@
 package org.learn.asm.utils;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
+import java.io.*;
 
 /**
  * 文件操作工具类
@@ -15,6 +13,23 @@ public class FileUtil {
     public static String getAbsolutePath(String relativePath) {
         String dir = FileUtil.class.getResource("/").getPath();
         return dir + relativePath;
+    }
+
+    public static byte[] readByteFromFile(String path) {
+        File file = new File(path);
+        byte[] bytes = new byte[1024];
+        try (BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(file));
+             ByteArrayOutputStream outputStream = new ByteArrayOutputStream()
+        ) {
+            int length;
+            while ((length = inputStream.read(bytes)) != -1) {
+                outputStream.write(bytes, 0, length);
+            }
+            return outputStream.toByteArray();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return new byte[0];
     }
 
     public static void writeByteToFile(byte[] bytes, String filePath) {
