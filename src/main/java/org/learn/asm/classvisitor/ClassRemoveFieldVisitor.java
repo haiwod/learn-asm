@@ -13,17 +13,17 @@ public class ClassRemoveFieldVisitor extends ClassVisitor {
 
     private final String fieldName;
 
-    private final String fieldDec;
+    private final String fieldDesc;
 
     public ClassRemoveFieldVisitor(int api, ClassVisitor classVisitor, String fieldName, String fieldDec) {
         super(api, classVisitor);
         this.fieldName = fieldName;
-        this.fieldDec = fieldDec;
+        this.fieldDesc = fieldDec;
     }
 
     @Override
     public FieldVisitor visitField(int access, String name, String descriptor, String signature, Object value) {
-        if (name.equals(fieldName) && descriptor.equals(fieldDec)) {
+        if (fieldName.equals(name) && fieldDesc.equals(descriptor)) {
             return null;
         }
         return super.visitField(access, name, descriptor, signature, value);
